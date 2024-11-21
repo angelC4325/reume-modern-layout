@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+body{
+    display: flex;
+    place-content: center;
+    width: 100%;
+}
+.resume{
+    padding: 0;
+    display: grid;
+    max-width:900px ;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: auto, auto;
+    grid-template-areas: "head head name"
+                         "slide content content";
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   
+}
+hr{
+    height: 3px;
+    background-color: aqua;
+    padding: 0;
+    margin: 0;
+}
+.name , .name> p,h1{
+        grid-area: name;
+        background-color: blue;
+        color: aliceblue;
+    }
+.head{
+ grid-area: head;
+ background-color: blue;
+ place-content: center;
+ height: auto;
+ 
+}
+
+.slide , .slide > p,h2,.skills{
+    grid-area: slide;
+    background-color: lightblue;
+    
+    
+}
+.slide > hr{
+    background-color: white;
+    color: white;
+}
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.skills > p{
+    font-size: .8em;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    align-content: center;
+    background-color: aqua;
+
+
+}
+.content{
+    grid-area: content;
+
+}
+img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin: 0;
+    padding: 0;
+}
+@media (max-width:780px){
+    .resume{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        text-align: center;
+        place-items: stretch;
+
+    }
+    
+}
